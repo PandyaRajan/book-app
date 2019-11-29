@@ -1,0 +1,200 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+img{
+  border-radius: 50%;
+}
+.App-link {
+  color: #09d3ac;
+}
+.ProfileName{
+  font-size: 30px;
+  margin-top: 5px;
+    margin-left: 15px;
+}
+.Home-div{
+  background-color: #282c34;
+  min-height: 100vh;
+  color: white;
+  width: 16%;
+  float: left;
+  padding-top: 20px;
+}
+.content-area{
+  float: left;
+  width: 69%;
+  padding-top: 20px;
+}
+.shelf-li{
+  width: 30%;
+  float: left;
+  border: 1px solid lightgrey;
+  border-radius: 10px;
+  margin: 12px;
+  padding: 25px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.shelf-menu{
+  padding: 20px;
+  border: 1px solid lightgrey;
+  margin: 20px 20px 20px 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.contacts-area{
+  float: left;
+  width: 15%;
+  background-color: #282c34;
+  color: white;
+  min-height: 100vh;
+  padding-top: 10px;
+}
+a img{
+  height:40px;
+}
+li a{
+  text-align: start;
+  padding: 0px;
+  color: white;
+  text-transform: capitalize;
+}
+a span{
+  margin-left: 10px;
+  font-size: 20px;
+}
+
+.guest-user-profile span{
+  margin-left: 10px;
+  font-size: 30px;
+  text-transform: capitalize;
+}
+.no-bull{
+  list-style-type: none;
+}
+.contact-div .no-bull{
+  list-style-type: none;
+  padding: 10px;
+}
+.contacts-list {
+  float: left ;
+  width: 100% ;
+  text-align: start;
+  padding: 5px 0px 5px 0px;
+}
+a:hover{
+    color:white;
+    text-decoration:none !important;
+    cursor:pointer;
+   }
+.contact-div .no-bull li:hover{
+    background-color:lightslategray;
+   }
+.book-shelf .no-bull li:hover{
+    background-color:rgb(245, 245, 245);
+    cursor:pointer;
+   }
+   .popup {  
+    position: fixed;  
+    width:35%;  
+    height: 20%;  
+    top: 0;  
+    left: 0;  
+    right: 0;  
+    bottom: 0;  
+    margin: auto;  
+    background-color:white;  
+    box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.7);
+    border-radius: 25px;
+  }  
+  .popup-inner { 
+      text-align: center; 
+    left: 25%;  
+    right: 25%;  
+    top: 25%;  
+    bottom: 25%;  
+    margin: auto;
+    border-radius: 25px;
+    background: white; 
+    padding: 30px;
+  }
+
+  .success-PopUp a{
+    position: absolute;
+    top: 15px;
+    margin-left: 165px;
+  }
+  .shelf-menu {
+    display: flex;
+    justify-content: space-between;
+  }
+  .shelf-btn{
+    width: 49%;
+  }
+  .cta-button {
+    border: none;
+    background: #282c34;
+    color: #ffffff !important;
+    font-weight: 100;
+    padding: 20px;
+    text-transform: uppercase;
+    border-radius: 6px;
+    display: inline-block;
+    transition: all 0.3s ease 0s;
+  }
+  .cta-button:hover {
+    color: #404040 !important;
+    font-weight: 700 !important;
+    letter-spacing: 3px;
+    background: none;
+    -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+    -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+    transition: all 0.3s ease 0s;
+  }
+  .cta-button:focus, .cta-button:active {
+    outline: none;
+  }
+  .shelf-li .cta-button{
+    margin-top: 10px;
+    padding: 10px;
+  }
+  .add-book-Popup{
+    justify-content: space-between;
+  }
+  .popUp-text,.nocontent-text{
+    font-size: 30px;
+  }
+  .popUp-text{
+    font-size: 30px;
+  }
+
+  .add-book-Popup .cta-button{
+    width: 20%;
+    padding: 10px;
+    margin-right: 35px;
+  }
+  .no-data-div{
+    padding: 200px;
+  }
+  .no-data-div .cta-button{
+    margin: 50px;
+  }
+  /* .content-area{
+    border: 1px solid lightgrey;
+    -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+    -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+    transition: all 0.3s ease 0s;
+  } */
