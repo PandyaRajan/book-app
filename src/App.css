@@ -72,7 +72,7 @@ li a{
   color: white;
   text-transform: capitalize;
 }
-a span{
+a span, .add-catalogue-span{
   margin-left: 10px;
   font-size: 20px;
 }
@@ -105,7 +105,6 @@ a:hover{
    }
 .book-shelf .no-bull li:hover{
     background-color:rgb(245, 245, 245);
-    cursor:pointer;
    }
    .popup {  
     position: fixed;  
@@ -136,6 +135,11 @@ a:hover{
     position: absolute;
     top: 15px;
     margin-left: 165px;
+  }
+  .catalogue-form a{
+    position: absolute;
+    top: 15px;
+    margin-left: 275px;
   }
   .shelf-menu {
     display: flex;
@@ -191,6 +195,48 @@ a:hover{
   }
   .no-data-div .cta-button{
     margin: 50px;
+  }
+  .add-catalogue-book{
+    font-size: 184px;
+    color: lightgrey !important;
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+  .add-book-li:hover{
+    cursor:pointer;
+    background: #fff;
+    transition: all 0.1s ease 0s;
+    color:rgb(49, 49, 49) !important;
+    font-weight: 600 !important;
+    background-color:#fff !important;
+    letter-spacing: 1.1px;
+  }
+  .add-catalogue-book-container{
+    position: fixed;  
+    width:35%;  
+    height: 40% !important;  
+  }
+  .catalogue-form{
+    padding: 50px;
+  }
+  .catalogue-form span{
+    margin-right: 50px;
+  }
+  table{
+    margin: 30px 0px 0px 75px;
+    text-align: start;
+    font-size: 20px;
+  }
+  .save-button{
+    padding: 5px 20px 5px 20px;
+    margin: 50px 10px 0px 0px;
+  }
+  .search-field{
+    width: 90%;
+    border-radius: 5px;
+  }
+  .bookshelf-search .search-field{
+    width: 20% !important;
   }
   /* .content-area{
     border: 1px solid lightgrey;

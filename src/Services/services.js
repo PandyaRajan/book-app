@@ -149,4 +149,31 @@ export default class Service {
             })
         })
     }
+
+    AddCatalogueBook(book) {
+        return new Promise((resolve, reject) => {
+            var apiUrl = "http://localhost:1337/book";
+            var cataloguebook = {
+                bookId: book.bookId,
+                name: book.bookName,
+                image: book.imageUrl,
+                author: book.author
+            }
+            fetch(apiUrl, {
+                method: 'POST', // or 'PUT'
+                body: JSON.stringify(cataloguebook), // data can be `string` or {object}!
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            }).then(response => {
+                response.json().then(data => {
+                    resolve(data)
+                }).catch(error => {
+                    reject(error)
+                })
+            }).catch(error => {
+                reject(error);
+            })
+        })
+    }
 }

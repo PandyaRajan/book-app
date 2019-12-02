@@ -6,9 +6,24 @@ export default class Contacts extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            activeContact: false
+            activeContact: false,
+            users:[],
+            searchUser:[]
         };
         this.getUserList = this.getUserList.bind(this);
+        this.searchContact = this.searchContact.bind(this);
+    }
+
+    searchContact(event){
+        var searchedUser = this.state.users.filter(obj=>{
+            return Object.keys(obj).some(function(key) {
+                if(JSON.stringify(obj["name"]).toLowerCase().indexOf(event.target.value.toLowerCase())!==-1){
+                    return obj
+                }
+              })
+    })
+    this.setState({searchUser:searchedUser});
+    console.log(this.state.searchUser)
     }
 
     getUserList() {
@@ -24,20 +39,27 @@ export default class Contacts extends React.Component {
         this.getUserList();
     }
     render() {
-        if (this.state.users !== undefined) {
-            Contact = this.state.users.map(user => 
-            (
-                (user.userId !== localStorage.getItem("userId")) ?(<li className={"contacts-list" +" "+ (this.state.activeContact?"active":"")}><a onClick={this.props.GuestUser.bind(this,user.userId)}>
-                        <img src={user.profileImageURL} className="contacts-img" alt="profileImage"/>
-                        <span>{user.name}</span>
-                        </a></li>)
-                    :(null)
-                )
-        )
-        }
         return (
             <div className="contact-div">
-                <ul className="no-bull">{Contact}</ul>
+                <input className="search-field" onChange={this.searchContact}></input>
+                <ul className="no-bull">
+                    {
+                        ((this.state.searchUser.length>0?this.state.searchUser:this.state.users).length > 0 ? (
+                            Contact = (this.state.searchUser.length>0?this.state.searchUser:this.state.users).map(user => 
+                            (
+                                (user.userId !== localStorage.getItem("userId")) ?
+                                    (<li className={"contacts-list" +" "+ (this.state.activeContact?"active":"")}><a onClick={this.props.GuestUser.bind(this,user.userId)}>
+                                        <img src={user.profileImageURL} className="contacts-img" alt="profileImage"/>
+                                        <span>{user.name}</span>
+                                        </a></li>
+                                    )
+                                    :(null)
+                            )
+                            )
+                            ):(null)
+                        )   
+                    }
+                </ul>
             </div>
         )
     }
