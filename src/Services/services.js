@@ -176,4 +176,24 @@ export default class Service {
             })
         })
     }
+
+    removeShelfBook(bookId) {
+        return new Promise((resolve, reject) => {
+            var apiUrl = "http://localhost:1337/myshelf/destroy/" + bookId;
+            fetch(apiUrl, {
+                method: 'GET', // or 'PUT'
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            }).then(response => {
+                response.json().then(data => {
+                    resolve(data)
+                }).catch(error => {
+                    console.log(error)
+                })
+            }).catch(error => {
+                reject(error);
+            })
+        })
+    }
 }

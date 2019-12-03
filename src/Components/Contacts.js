@@ -29,7 +29,8 @@ export default class Contacts extends React.Component {
     getUserList() {
         serviceObj.getUsers().then(data => {
             this.setState({
-                users: data
+                users: data,
+                searchUser:data
             });
         }).catch(error => {
             console.log(error);
@@ -41,11 +42,11 @@ export default class Contacts extends React.Component {
     render() {
         return (
             <div className="contact-div">
-                <input className="search-field" onChange={this.searchContact}></input>
+                <input className="search-field" onChange={this.searchContact} placeholder="Search"></input>
                 <ul className="no-bull">
                     {
-                        ((this.state.searchUser.length>0?this.state.searchUser:this.state.users).length > 0 ? (
-                            Contact = (this.state.searchUser.length>0?this.state.searchUser:this.state.users).map(user => 
+                        ((this.state.searchUser.length>0 &&
+                            (this.state.searchUser).map(user => 
                             (
                                 (user.userId !== localStorage.getItem("userId")) ?
                                     (<li className={"contacts-list" +" "+ (this.state.activeContact?"active":"")}><a onClick={this.props.GuestUser.bind(this,user.userId)}>
@@ -56,10 +57,11 @@ export default class Contacts extends React.Component {
                                     :(null)
                             )
                             )
-                            ):(null)
+                            )
                         )   
                     }
                 </ul>
+                {(this.state.searchUser.length<=0)&&<h6>No contacts</h6>}
             </div>
         )
     }

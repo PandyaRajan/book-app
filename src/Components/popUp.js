@@ -32,8 +32,8 @@ export default class PopUp extends React.Component {
                             <a onClick={this.props.closePopUp}><img src="https://www.freeiconspng.com/uploads/close-button-png-27.png" alt="closeImage"></img></a>
                             </div>
                             :<div className="add-book-Popup"><span className="popUp-text">Do you want to add {this.props.book.name} Book to your List</span><br/>
-                                <input className="cta-button" type="button" value='Yes' onClick={this.AddBookToList}></input>
-                                <input className="cta-button" type="button" value='No' onClick={this.props.closePopUp}></input>
+                                <div className="popUp-button"><input className="cta-button" type="button" value='Yes' onClick={this.AddBookToList}></input>
+                                <input className="cta-button" type="button" value='No' onClick={this.props.closePopUp}></input></div>
                             </div>
                     }
                 </div>

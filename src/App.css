@@ -66,6 +66,11 @@ img{
 a img{
   height:40px;
 }
+.shelf-li img{
+height: 210px;
+border-radius: unset;
+margin-bottom: 10px;
+}
 li a{
   text-align: start;
   padding: 0px;
@@ -90,10 +95,21 @@ a span, .add-catalogue-span{
   padding: 10px;
 }
 .contacts-list {
-  float: left ;
-  width: 100% ;
-  text-align: start;
+  text-align: left;
   padding: 5px 0px 5px 0px;
+  
+}
+.contacts-list a {
+  display: block;
+  display: flex;
+  justify-content: space-between;
+}
+.contacts-list a span {
+  text-align: left;
+  width: 78%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 a:hover{
     color:white;
@@ -106,6 +122,7 @@ a:hover{
 .book-shelf .no-bull li:hover{
     background-color:rgb(245, 245, 245);
    }
+
    .popup {  
     position: fixed;  
     width:35%;  
@@ -136,7 +153,7 @@ a:hover{
     top: 15px;
     margin-left: 165px;
   }
-  .catalogue-form a{
+  .catalogue-form a,.shelf-form a{
     position: absolute;
     top: 15px;
     margin-left: 275px;
@@ -177,12 +194,13 @@ a:hover{
   }
   .add-book-Popup{
     justify-content: space-between;
+    margin-top: 10px;
   }
   .popUp-text,.nocontent-text{
     font-size: 30px;
   }
   .popUp-text{
-    font-size: 30px;
+    font-size: 25px;
   }
 
   .add-book-Popup .cta-button{
@@ -197,7 +215,7 @@ a:hover{
     margin: 50px;
   }
   .add-catalogue-book{
-    font-size: 184px;
+    font-size: 195px;
     color: lightgrey !important;
     margin-left: 100px;
     margin-right: 100px;
@@ -211,7 +229,7 @@ a:hover{
     background-color:#fff !important;
     letter-spacing: 1.1px;
   }
-  .add-catalogue-book-container{
+  .add-catalogue-book-container,.book-details-container{
     position: fixed;  
     width:35%;  
     height: 40% !important;  
@@ -229,15 +247,93 @@ a:hover{
   }
   .save-button{
     padding: 5px 20px 5px 20px;
-    margin: 50px 10px 0px 0px;
+    margin: 25px 10px 0px 0px;
   }
   .search-field{
     width: 90%;
     border-radius: 5px;
+    padding: 7px 10px;
+    border: 1px solid #ccc;
+    line-height: 1;
   }
   .bookshelf-search .search-field{
-    width: 20% !important;
+    width: auto;
+    min-width: 300px !important;
+    color: #000;
+    height: 100%;
   }
+  .catalogue-search{
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .book-shelf ul {
+      padding: 0;
+      list-style: none;
+      padding: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+  }
+  .book-shelf ul li {
+    margin: 0px 0px 1.5% 0px;
+    width: 32%;
+  }
+  input:focus{
+    outline: none;
+  }
+  input{
+    border-radius: 5px;
+  }
+  .popUp-button{
+    margin-top: 20px;
+  }
+  td{
+    padding: 5px 0px 5px 0px;
+  }
+  ::-webkit-input-placeholder {
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  li span{
+    padding: 2px 0px 2px 0px !important;
+  }
+  .catalogue-search span {
+    font-size: 25px;
+  }
+  .myshelf-li{
+    cursor: pointer;
+  }
+  .shelf-form td{
+    width: 35%;
+    font-size: 20px;
+  }
+  .book-details-img{
+    border-radius: unset;
+    height: 85px;
+  }
+  .shelf-form table{
+      margin: 20px 0px 0px 170px;
+      text-align: start;
+      font-size: 20px;
+  }
+  .shelf-form{
+    padding: 15px;
+  }
+  .remove-button{
+    margin-top: 10px;
+    padding: 10px;
+  }
+  .shelf-title{
+    
+  }
+ .shelf-title span  {
+  font-size: 30px;
+  }
+  /* .book-shelf{
+    margin-top: 25px;
+   } */
   /* .content-area{
     border: 1px solid lightgrey;
     -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
